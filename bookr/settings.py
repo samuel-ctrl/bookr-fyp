@@ -122,10 +122,10 @@ class Dev(Configuration):
 
     STATIC_URL = '/static/'
 
-    STATIC_ROOT = values.Value()
+    STATIC_ROOT = 'staticfiles'
     STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
-    MEDIA_ROOT = values.Value(os.path.join(BASE_DIR, 'media'))
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
     MEDIA_URL = '/media/'
     INTERNAL_IPS = ['127.0.0.1']
     CRISPY_TEMPLATE_PACK = 'bootstrap4'
